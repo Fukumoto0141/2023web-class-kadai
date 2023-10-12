@@ -8,7 +8,7 @@ let aList = document.querySelectorAll("a");
 aList.forEach(a => {
   a.onclick = event => {
     event.preventDefault();//アンカーリンクのデフォルト挙動をdisable
-    window.history.pushState(null, "", a.href);
+    window.history.pushState(null, "", location.pathname + a.href);
     updateView();//ここで定義した関数を発火
   };
 });
