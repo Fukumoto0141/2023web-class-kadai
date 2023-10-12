@@ -1,0 +1,426 @@
+/*==================================================
+フェードイン・フェードアウト
+===================================*/
+
+.box {
+  opacity: 0;
+  /* 透明度（非表示） */
+  transition: 1.0s;
+  /*表示する速さ*/
+  position: relative;
+  right: 50px;
+  /* 事前に下に50pxずらしておく */
+}
+
+.active {
+  opacity: 1;
+  transform: translate(-50px, 0);
+}
+
+.t1 {
+  transform: translate(-75px, 0);
+}
+
+.t2 {
+  transform: translate(-100px, 0);
+}
+
+.t3 {
+  transform: translate(-125px, 0);
+}
+
+.t4{
+  transform: translate(-150px, 0);
+}
+
+.items-inactive {
+  opacity: 0;
+  /* 透明度を元に戻す */
+  right: -50px;
+}
+
+/*==================================================
+横スクロール要素
+===================================*/
+.section-conts {
+  display: flex;
+}
+
+.contents-block {
+  width: 100vw;
+  width: 100dvw;
+  height: 100%;
+  padding: 4rem;
+}
+
+#home {
+  background-color: rgb(245, 245, 245);
+}
+
+/*==================================================
+top画面タイトル
+===================================*/
+.main-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  margin: 0;
+  height: 80%;
+  width: 50%;
+  background-image: url(../images/BigLogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  user-select: none;
+  font-size: 0;
+}
+
+.logo-text:hover {
+  background-image: url(../images/BigLogo2.png);
+}
+
+.logo-face {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+  left: 5vw;
+
+  height: 700px;
+  width: 700px;
+  background-image: url(../images/logoF1ace.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  -webkit-animation: floating 3s ease-in-out infinite;
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translatey(0px)
+  }
+
+  50% {
+    transform: translatey(-5%)
+  }
+
+  100% {
+    transform: translatey(0px)
+  }
+}
+
+/*----------------------------
+§2
+-----------------------------*/
+.main-introduction {
+  height: 80%;
+  position: relative;
+  background-image: url(../images/speechBubble.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  transition: 1.0s;
+  right: -50px;
+}
+
+.introduction-texts {
+  position: absolute;
+  top: 8%;
+  left: 22%;
+}
+
+.introduction-texts h2 {
+  font-size: calc(10px + 3vw);
+  line-height: calc(5px + 3vw);
+  font-weight: 900;
+  user-select: none;
+  margin: 0;
+}
+
+.introduction-texts h2::after {
+  content: '';
+  width: 10vw;
+  min-width: 100px;
+  max-width: 200px;
+  height: 1vw;
+  max-height: 10px;
+  min-height: 3px;
+  display: block;
+  background: #000;
+  margin: 10px 0 15px;
+}
+
+.introduction-texts p {
+  font-weight: 100;
+  width: 400px;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  word-wrap: break-word;
+}
+.human{
+  position: relative;
+  left: -10%;
+  top: -36%;
+  height: 80%;
+  display: flex;
+}
+.hu1{
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu1.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu2{
+  position: absolute;
+  left: 131px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu2.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu3{
+  position: absolute;
+  left: 280px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu3.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu4{
+  position: absolute;
+  left: 432px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu4.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu5{
+  position: absolute;
+  left: 608px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu5.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu6{
+  position: absolute;
+  left: 780px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu6.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.hu7{
+  position: absolute;
+  left: 1200px;
+  height: 100%;
+  width: 19%;
+  background-image: url(../images/hu7.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.fadeIn-up{
+  opacity: 0;
+  /* 透明度（非表示） */
+  transition: 1.0s;
+  /*表示する速さ*/
+  position: absolute;
+  /* 事前に下に50pxずらしておく */
+  top: 50px;
+}
+
+.active-up{
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+.inactive-up{
+  opacity: 0;
+}
+
+/*-----------------------------------------------
+§3
+------------------------------------------------*/
+.main-product{
+  top: -20%;
+  left: -10%;
+  height: 150%;
+  background-image: url(../images/pc.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* 透明度（非表示） */
+  transition: 1.0s;
+  /*表示する速さ*/
+  position: relative;
+  right: 50px;
+  /* 事前に下に50pxずらしておく */
+}
+.products-texts{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+.products-texts p{
+  width: 580px;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  word-wrap: break-word;
+}
+
+.win{
+  top: -160%;
+  left: 63%;
+  position: relative;
+  height: 400px;
+  width: 640px;
+  background-image: url(../images/Window.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.w2{
+  top: -200%;
+  left: 66%;
+}
+
+.w3{
+  top: -240%;
+  left: 69%;
+}
+
+/*----------------------------
+§4
+-------------------------------*/
+.consent{
+  position: relative;
+  top: -300%;
+  height: 100%;
+  width: 470px;
+  background-image: url(../images/konsent.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.recomends__item {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  white-space: normal;
+  margin: 0px 20px 20px;
+  transition: all 200ms;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.r1{
+  left: -40%;
+}
+
+.r2{
+  top: -60%;
+  left: -20%;
+}
+
+.r3{
+  top: -170%;
+  left: -0%;
+}
+
+.recomends__item:hover{
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.recomends__item:hover .recomends__line{
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.recomends__image {
+  background-image: url(../images/OIG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.recomends__content {
+  padding: 10px 20px 20px;
+}
+.recomends__title {
+  font-size: 25px;
+  line-height: 27px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: 900;
+  display: block;
+}
+.recomends__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e20303;
+  -webkit-transform: translateX(-35px);
+  transform: translateX(-35px);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  will-change: transform;
+  transition: all .2s;
+}
+
+.recomends__read {
+  display: block;
+  width: 35px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 150ms;
+  overflow: hidden;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.recomends-title{
+  display: flex;
+  transition: 1.0s;
+  position: relative;
+  top: -240%;
+  left: 22%;
+  height: 100%;
+  width: 80%;
+  background-image: url(../images/404.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.recomends__content a {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.rim2{
+  background-image: url(../images/OIG.T.vn...jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rim3{
+  background-image: url(../images/OIG\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,102 @@
+.item-container{
+  display: flex;
+  margin: 2rem 0 0 0;
+}
+.img-size{
+  height: 480px;
+}
+
+.img-size a{
+  text-align: end;
+}
+
+.item-boc{
+  width: 33%;
+}
+.img{
+  margin: 3rem 5rem 5rem 0;
+  height: 90%;
+  width: 50%;
+}
+.i1{
+  background-image: url(../images/OIG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.i2{
+  background-image: url(../images/OIG.T.vn...jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.i3{
+  background-image: url(../images/OIG\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contents-text{
+  margin: 2rem 0 0 0;
+  height: 90%;
+  width: 50%;
+  background-color: rgb(255, 0, 0);
+}
+.buy{
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: right;
+}
+.spase{
+  margin-bottom: 160px;
+}
+
+
+.contents-texts h2 {
+  font-size: calc(10px + 3vw);
+  line-height: calc(5px + 3vw);
+  font-weight: 900;
+  user-select: none;
+  margin: 0;
+}
+
+.contents-texts h2::after {
+  content: '';
+  width: 10vw;
+  min-width: 100px;
+  max-width: 200px;
+  height: 1vw;
+  max-height: 10px;
+  min-height: 3px;
+  display: block;
+  background: #000;
+  margin: 10px 0 15px;
+}
+
+.contents-texts p {
+  font-weight: 100;
+  width: 400px;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  word-wrap: break-word;
+}
+
+.content-zise{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+a.btn_11:hover {
+	opacity: 0.5;
+}
+
+.btn--orange,
+a.btn--orange {
+  margin-left: auto;
+  width: 120px;
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
