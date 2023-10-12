@@ -8,7 +8,7 @@ let aList = document.querySelectorAll("a");
 aList.forEach(a => {
   a.onclick = event => {
     event.preventDefault();//アンカーリンクのデフォルト挙動をdisable
-    window.history.pushState(null, "", location.pathname + a.href);
+    window.history.pushState(null, "", a.href);
     updateView();//ここで定義した関数を発火
   };
 });
@@ -19,12 +19,12 @@ const updateView = () => {
   $(".logo").removeClass("inactive");
   let url = '';
   if (window.location.pathname == '/') {
-    url = './pages/home.html';
+    url = '/home.html';
   } else {
-    url = `./pages${window.location.pathname}.html `;
+    url = `${window.location.pathname}.html `;
   }
   $.ajax({
-    url: `${url}`,  // 読み込むHTMLファイル
+    url: `https://fukumoto0141.github.io/2023web-class-kadai/pages${url}`,  // 読み込むHTMLファイル
     dataType: 'html',
     success: function (html) {
       document.getElementById("main").innerHTML = html;
