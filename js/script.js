@@ -62,7 +62,6 @@ $(window).on('load', function(){//ページのロード
         $(this).addClass('active-up');//表示させるためのクラスつける
       }
     });
-    console.log($(".w2").offset().left);
   });
 });
 
@@ -100,7 +99,6 @@ $(function(){
 
       $(this).stop().animate({scrollLeft: moving }, 10, 'linear');
       
-      console.log(delta, deltaX, deltaY, $(this).scrollLeft());
     }else{
       return;
     }
