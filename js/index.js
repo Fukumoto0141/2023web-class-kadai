@@ -18,7 +18,7 @@ const updateView = () => {
   $("nav").removeClass("in");
   $(".logo").removeClass("inactive");
   let url = '';
-  if (window.location.pathname == '/') {
+  if (window.location.pathname == '/' || window.location.pathname == '/2023web-class-kadai/') {
     url = '/home.html';
   } else {
     url = `${window.location.pathname}.html `;
